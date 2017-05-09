@@ -1,0 +1,8 @@
+service namespace "cp100.services" {
+    "sap.hana.democontent.epm.data::SO.Header" as "SOHeader"
+        navigates ("Items" as "SOItem");
+    "sap.hana.democontent.epm.data::SO.Item" as "SOItem";
+    association "Items"
+        principal "SOHeader"("SALESORDERID") multiplicity "1"
+        dependent "SOItem"("SALESORDERID") multiplicity "*";
+}
