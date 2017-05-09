@@ -1,4 +1,4 @@
-service namespace "cp100.services" {
+service namespace "groupxx.services" {
     "sap.hana.democontent.epm.data::SO.Header" as "SOHeader"
         navigates ("Items" as "SOItem");
     "sap.hana.democontent.epm.data::SO.Item" as "SOItem";
